@@ -45,7 +45,12 @@ ModelImporter:
     7400000: Default Take
     9500000: //RootNode
     13700000: Cylinder
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__Seamless_marble_texture_512_jpg
+    second: {fileID: 2100000, guid: 9a1885fa2fb324e41a6cf48015c6aeec, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
