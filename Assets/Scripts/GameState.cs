@@ -96,4 +96,11 @@ public class GameState : MonoBehaviour {
         ActiveScene = 0; // menu scene
         SceneManager.LoadScene(ActiveScene);
     }
+
+    /// <summary>
+    /// Load the HighScores Scene
+    /// </summary>
+    public void LoadHighScores() {
+        // TODO
+    }
 }
