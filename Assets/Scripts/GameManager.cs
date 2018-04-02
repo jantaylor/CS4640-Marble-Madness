@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -27,6 +28,14 @@ public class GameManager : MonoBehaviour {
         set { currentScore = value; }
     }
 
+    /// <summary>
+    /// Public Game Over
+    /// </summary>
+    public bool GameOver {
+        get { return gameOver; }
+        set { gameOver = value; }
+    }
+
 	// Use this for initialization
 	void Start () {
         currentScore = GameState.Instance.Score;
@@ -38,7 +47,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		if (gameOver) {
             // TODO
-            return;
+            GameState.Instance.LoadMenu();
         } else if (levelComplete) {
             // TODO
             return;
