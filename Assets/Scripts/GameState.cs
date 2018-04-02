@@ -17,6 +17,12 @@ public class GameState : MonoBehaviour {
     private int activeScene;
 
     /// <summary>
+    /// Player's score default to 0
+    /// </summary>
+    [SerializeField]
+    private int score;
+
+    /// <summary>
     /// List of Scene Names hard coded
     /// </summary>
     [SerializeField]
@@ -34,6 +40,14 @@ public class GameState : MonoBehaviour {
     }
 
     /// <summary>
+    /// Set and get the score
+    /// </summary>
+    public int Score {
+        get { return score; }
+        set { score = value; }
+    }
+
+    /// <summary>
     /// On starting the game, singleton state created
     /// </summary>
     void Awake() {
@@ -46,6 +60,7 @@ public class GameState : MonoBehaviour {
     }
 
     void Start() {
+        score = 0; // Game always starts out at 0
         activeScene = 0; // 0 is menu, 1 is level 1
     }
 
