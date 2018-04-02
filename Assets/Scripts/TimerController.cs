@@ -30,7 +30,7 @@ public class TimerController : MonoBehaviour {
         timeLeft -= Time.deltaTime;
         int time = (int)timeLeft;
         gameTimer.text = time.ToString();
-        if (timeLeft < 0) {
+        if (timeLeft <= 0) {
             gameManager.GameOver = true;
         }
     }
