@@ -17,9 +17,13 @@ public class MarbleController : MonoBehaviour {
 
     private SphereCollider collide; //the marble controller for movement and physics
 
-	void Start()
+    private Rigidbody rb;
+    public float speed;
+
+
+    void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -27,12 +31,23 @@ public class MarbleController : MonoBehaviour {
 	
     void Update()
     {
+        /*
         float translation = Input.GetAxis("Vertical") * moveSpeed; //up and down
         float straffe = Input.GetAxis("Horizontal") * moveSpeed; //side to side
         translation *= Time.deltaTime;
         straffe *= Time.deltaTime;
         transform.Translate(straffe, 0, translation);
+        */
 
     }
+    void FixedUpdate()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        //seems like it should take accelerometer input too
+
+        rb.AddForce(movement * speed);
+    }
 }
