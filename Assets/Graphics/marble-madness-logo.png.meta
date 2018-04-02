@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 06f5bfad16d4a284dacb50bb4ecc9358
-timeCreated: 1522632105
+guid: 62b7f4ec1076e484b8972f5c87f4346a
+timeCreated: 1522632577
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -8,7 +8,7 @@ TextureImporter:
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,8 +34,8 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
@@ -50,7 +50,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -109,11 +109,7 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: -168, y: 120}
-      - {x: -168, y: -120}
-      - {x: 168, y: -120}
-      - {x: 168, y: 120}
+    outline: []
     physicsShape: []
   spritePackingTag: 
   userData: 
