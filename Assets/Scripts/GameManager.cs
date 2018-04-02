@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentScore = GameState.Instance.Score;
+        gameOver = false;
+        levelComplete = false;
 	}
 	
 	// Update is called once per frame
