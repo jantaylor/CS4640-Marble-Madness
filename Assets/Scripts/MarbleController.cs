@@ -5,13 +5,13 @@ using UnityEngine;
 
 ///Marble Controller
 ///Liz "Frankie" Ruttenbur
+/// 
+/// Edits:
+/// Andrew Merrell
 
 
 
 public class MarbleController : MonoBehaviour {
-
-
-    public float moveSpeed = 50.0f; //the movement speed
 
     public float force = 10.0f; //adjustable force that can be changed through Unity
 
@@ -31,13 +31,7 @@ public class MarbleController : MonoBehaviour {
 	
     void Update()
     {
-        /*
-        float translation = Input.GetAxis("Vertical") * moveSpeed; //up and down
-        float straffe = Input.GetAxis("Horizontal") * moveSpeed; //side to side
-        translation *= Time.deltaTime;
-        straffe *= Time.deltaTime;
-        transform.Translate(straffe, 0, translation);
-        */
+        
 
     }
     void FixedUpdate()
