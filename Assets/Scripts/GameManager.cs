@@ -5,28 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    /// <summary>
-    /// current player's score
-    /// </summary>
-    private int currentScore;
+    public bool playerOneFinished = false;
+
+    public bool playerTwoFinished = false;
+
+    public bool twoPlayers = false;
 
     /// <summary>
     /// Boolean to hold if the game is over or not
     /// </summary>
-    private bool gameOver;
+    public bool gameOver;
+
+    /// <summary>
+    /// If the player dies by falling we needn't animate
+    /// </summary>
+    private bool playerDeathByFall;
+
+    /// <summary>
+    /// If the player dies, otherwise, there's usually a "dustpan" animation
+    /// </summary>
+    private bool playerDeathByEnemy;
 
     /// <summary>
     /// Boolean to hold if the level is completed
     /// </summary>
     private bool levelComplete;
-
-    /// <summary>
-    /// Public Score
-    /// </summary>
-    public int CurrentScore {
-        get { return currentScore; }
-        set { currentScore = value; }
-    }
 
     /// <summary>
     /// Public Game Over
@@ -38,9 +41,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        currentScore = GameState.Instance.Score;
-        gameOver = false;
-        levelComplete = false;
+        LoadGame();
 	}
 	
 	// Update is called once per frame
@@ -54,4 +55,17 @@ public class GameManager : MonoBehaviour {
         }
         return;
 	}
+
+    private void LoadGame() {
+        twoPlayers = GameState.Instance.TwoPlayers;
+
+        playerOneFinished = false;
+        playerTwoFinished = false;
+        gameOver = false;
+        levelComplete = false;
+    }
+
+    private void SaveGame() {
+        // TODO
+    }
 }

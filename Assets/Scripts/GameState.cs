@@ -17,10 +17,16 @@ public class GameState : MonoBehaviour {
     private int activeScene;
 
     /// <summary>
-    /// Player's score default to 0
+    /// Player's one score default to 0
     /// </summary>
     [SerializeField]
-    private int score;
+    private int playerOneScore;
+
+    /// <summary>
+    /// Player's two score default to 0
+    /// </summary>
+    [SerializeField]
+    private int playerTwoScore;
 
     /// <summary>
     /// List of Scene Names hard coded
@@ -32,6 +38,11 @@ public class GameState : MonoBehaviour {
     };
 
     /// <summary>
+    /// Two player game or not
+    /// </summary>
+    private bool twoPlayers = false;
+
+    /// <summary>
     /// Set and get active scene
     /// </summary>
     public int ActiveScene {
@@ -40,11 +51,24 @@ public class GameState : MonoBehaviour {
     }
 
     /// <summary>
-    /// Set and get the score
+    /// Set and get player one's score
     /// </summary>
-    public int Score {
-        get { return score; }
-        set { score = value; }
+    public int PlayerOneScore {
+        get { return playerOneScore; }
+        set { playerOneScore = value; }
+    }
+
+    /// <summary>
+    /// Set and get player one's score
+    /// </summary>
+    public int PlayerTwoScore {
+        get { return playerOneScore; }
+        set { playerOneScore = value; }
+    }
+
+    public bool TwoPlayers {
+        get { return twoPlayers; }
+        set { twoPlayers = value; }
     }
 
     /// <summary>
@@ -60,7 +84,9 @@ public class GameState : MonoBehaviour {
     }
 
     void Start() {
-        score = 0; // Game always starts out at 0
+        playerOneScore = 0; // Game always starts out at 0
+        playerTwoScore = 0;
+        twoPlayers = false;
         activeScene = 0; // 0 is menu, 1 is level 1
     }
 
