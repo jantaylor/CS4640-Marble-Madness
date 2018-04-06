@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     /// <summary>
     /// Boolean to hold if the game is over or not
     /// </summary>
-    private bool gameOver;
+    public bool gameOver;
 
     /// <summary>
     /// If the player dies by falling we needn't animate

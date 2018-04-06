@@ -9,7 +9,7 @@ public class ScoreController : MonoBehaviour {
 
     private int playerTwoScore;
 
-    private int tickScore = 10;
+    private int tickScore = 70;
 
     private int finishScore = 1000;
 
@@ -35,6 +35,8 @@ public class ScoreController : MonoBehaviour {
 
     public Text playerTwoScoreText;
 
+    public Text bonusScoreText;
+
     public TimerController timerController;
 
     public GameManager gameManager;
@@ -43,19 +45,36 @@ public class ScoreController : MonoBehaviour {
 	void Start () {
         gameManager = FindObjectOfType<GameManager>();
         LoadScores();
-	}
+        InvokeRepeating("AddTickScore", 0.0f, 1f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        // TODO - disable tickScore when falling/respawn temporarily
+        if (gameManager.GameOver)
+            CancelInvoke();
 	}
 
-    public void AddFinishScore() {
-        
+    public void AddFinishScorePlayerOne() {
+        PlayerOneScore += finishScore;
     }
 
-    public int CalculateBonusScore() {
-        return timerController.timeLeftInt * 10;
+    public void AddFinishScorePlayerTwo() {
+        if (gameManager.twoPlayers)
+            PlayerTwoScore += finishScore;
+    }
+
+    public void AddTickScore() {
+        PlayerOneScore += tickScore;
+
+        if (gameManager.twoPlayers) {
+            PlayerTwoScore += tickScore;
+        }
+    }
+
+    public void CalculateBonusScore() {
+        bonusScore = timerController.timeLeftInt * 10;
+        bonusScoreText.text = "+ " + bonusScore.ToString();
     }
 
     private void LoadScores() {

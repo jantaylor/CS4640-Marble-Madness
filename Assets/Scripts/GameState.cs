@@ -86,6 +86,7 @@ public class GameState : MonoBehaviour {
     void Start() {
         playerOneScore = 0; // Game always starts out at 0
         playerTwoScore = 0;
+        twoPlayers = false;
         activeScene = 0; // 0 is menu, 1 is level 1
     }
 
