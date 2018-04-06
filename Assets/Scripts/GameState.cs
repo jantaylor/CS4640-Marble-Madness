@@ -38,6 +38,11 @@ public class GameState : MonoBehaviour {
     };
 
     /// <summary>
+    /// Two player game or not
+    /// </summary>
+    private bool twoPlayers = false;
+
+    /// <summary>
     /// Set and get active scene
     /// </summary>
     public int ActiveScene {
@@ -59,6 +64,11 @@ public class GameState : MonoBehaviour {
     public int PlayerTwoScore {
         get { return playerOneScore; }
         set { playerOneScore = value; }
+    }
+
+    public bool TwoPlayers {
+        get { return twoPlayers; }
+        set { twoPlayers = value; }
     }
 
     /// <summary>

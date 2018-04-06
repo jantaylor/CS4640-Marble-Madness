@@ -20,7 +20,11 @@ public class TimerController : MonoBehaviour {
     /// </summary>
     public float timeLeft = 90;
 
+    public int timeLeftInt;
+
     public int bonusTime = 0;
+
+    public bool timerStopped = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +33,12 @@ public class TimerController : MonoBehaviour {
 	
 	// Count down timer
 	void Update () {
+        if (timerStopped)
+            return;
+
         timeLeft -= Time.deltaTime;
-        int time = (int)timeLeft;
-        gameTimer.text = time.ToString();
+        timeLeftInt = (int)timeLeft;
+        gameTimer.text = timeLeftInt.ToString();
         if (timeLeft <= 0) {
             gameManager.GameOver = true;
         }
