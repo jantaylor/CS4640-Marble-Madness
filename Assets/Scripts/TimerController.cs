@@ -20,6 +20,8 @@ public class TimerController : MonoBehaviour {
     /// </summary>
     public float timeLeft = 90;
 
+    public int bonusTime = 0;
+
 	// Use this for initialization
 	void Start () {
         gameManager = FindObjectOfType<GameManager>();
