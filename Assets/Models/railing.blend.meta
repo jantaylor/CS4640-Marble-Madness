@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 87d608dbd9f659f428a75c3de0cbe018
-timeCreated: 1522963974
+guid: c16d170b86a9b424fa680634c49a1080
+timeCreated: 1522989183
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,8 +10,7 @@ ModelImporter:
     2100000: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
-    4300002: Tile
+    4300000: Post_000
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
