@@ -7,7 +7,7 @@ public class Goal : MonoBehaviour {
     public int numPlayersWon = 0;
 	// Use this for initialization
 	void Start () {
-		
+		///know maximum number of players
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class Goal : MonoBehaviour {
     /// their score is updated based on timer remaining
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerExit(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         // do we assume that a player triggered?
         // sure why not
@@ -38,6 +38,6 @@ public class Goal : MonoBehaviour {
 
 
         }
-        //do same 
+        // when maxplayers and numplayers are the same, queue next level
     }
 }

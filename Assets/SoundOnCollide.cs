@@ -10,13 +10,14 @@ public class SoundOnCollide : MonoBehaviour {
     private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
+        
         audioSource = GetComponent<AudioSource>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	/// <summary>
+    /// Raises the trigger enter event.
+    /// </summary>
+    /// <param name="other">Other.</param>
     void OnTriggerEnter(Collider other) {
         audioSource.Play();
     }
