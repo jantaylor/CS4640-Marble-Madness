@@ -1,56 +1,19 @@
 fileFormatVersion: 2
-guid: 1488d7096e5d41345b6913c34c323bad
-timeCreated: 1522014219
+guid: 4b300859dcf0818428137a8665c06ee5
+timeCreated: 1522963970
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Armature
-    100002: Armature_001
-    100004: Bone
-    100006: Bone_0
-    100008: Bone_002
-    100010: Bone_003
-    100012: Bone_004
-    100014: Bone_005
-    100016: Bone_006
-    100018: Bone_007
-    100020: Bone_008
-    100022: Cylinder
-    100024: Empty
-    100026: //RootNode
-    100028: Plane
-    400000: Armature
-    400002: Armature_001
-    400004: Bone
-    400006: Bone_0
-    400008: Bone_002
-    400010: Bone_003
-    400012: Bone_004
-    400014: Bone_005
-    400016: Bone_006
-    400018: Bone_007
-    400020: Bone_008
-    400022: Cylinder
-    400024: Empty
-    400026: //RootNode
-    400028: Plane
-    2100000: Material_001__Seamless_Metal_Plate_Texture_jpg
-    2100002: Material__Seamless_marble_texture_512_jpg
-    2100004: unnamed
-    2300000: Plane
-    3300000: Plane
-    4300000: Cylinder
-    4300002: Plane
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Tile_004
     7400000: Default Take
     9500000: //RootNode
-    13700000: Cylinder
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material__Seamless_marble_texture_512_jpg
-    second: {fileID: 2100000, guid: 9a1885fa2fb324e41a6cf48015c6aeec, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

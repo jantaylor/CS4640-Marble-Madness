@@ -16,6 +16,16 @@ public class GameManager : MonoBehaviour {
     private bool gameOver;
 
     /// <summary>
+    /// If the player dies by falling we needn't animate
+    /// </summary>
+    private bool playerDeathByFall;
+
+    /// <summary>
+    /// If the player dies, otherwise, there's usually a "dustpan" animation
+    /// </summary>
+    private bool playerDeathByEnemy;
+
+    /// <summary>
     /// Boolean to hold if the level is completed
     /// </summary>
     private bool levelComplete;
