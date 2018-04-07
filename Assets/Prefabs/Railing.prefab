@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 82129012206659338}
   - component: {fileID: 136830509447729752}
   m_Layer: 0
-  m_Name: railing
+  m_Name: Railing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
