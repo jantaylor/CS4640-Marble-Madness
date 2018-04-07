@@ -23,7 +23,8 @@ public class MenuManager : MonoBehaviour {
     /// Start a new local multiplayer lobby
     /// </summary>
     public void LocalMultiplayer() {
-        // TODO
+        GameState.Instance.TwoPlayers = true;
+        GameState.Instance.LoadNextScene();
     }
 
     /// <summary>

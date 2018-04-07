@@ -313,6 +313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 3
   speed: 6
+  horizontalCtrl: Horizontal_P1
+  VerticalCtrl: Vertical_P1
 --- !u!135 &135186742118300232
 SphereCollider:
   m_ObjectHideFlags: 1
