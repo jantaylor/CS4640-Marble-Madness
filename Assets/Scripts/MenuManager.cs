@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
@@ -23,7 +24,8 @@ public class MenuManager : MonoBehaviour {
     /// Start a new local multiplayer lobby
     /// </summary>
     public void LocalMultiplayer() {
-        // TODO
+        GameState.Instance.TwoPlayers = true;
+        SceneManager.LoadScene("Level2");
     }
 
     /// <summary>

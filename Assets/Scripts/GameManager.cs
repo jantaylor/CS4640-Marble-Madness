@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public bool gameOver;
 
+    public GameObject player2;
+
     /// <summary>
     /// If the player dies by falling we needn't animate
     /// </summary>
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour {
             GameState.Instance.LoadMenu();
         } else if (levelComplete) {
             // TODO
+            GameState.Instance.LoadMenu();
             return;
         }
         return;
@@ -58,6 +61,10 @@ public class GameManager : MonoBehaviour {
 
     private void LoadGame() {
         twoPlayers = GameState.Instance.TwoPlayers;
+
+        if (twoPlayers) {
+            player2.gameObject.SetActive(true);
+        }
 
         playerOneFinished = false;
         playerTwoFinished = false;

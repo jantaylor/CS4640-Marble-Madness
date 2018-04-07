@@ -8,6 +8,7 @@ using UnityEngine;
 /// 
 /// Edits:
 /// Andrew Merrell
+/// Jan Taylor
 
 
 
@@ -20,6 +21,9 @@ public class MarbleController : MonoBehaviour {
     private Rigidbody rb;
     public float speed;
 
+    public string horizontalCtrl = "Horizontal_P1";
+
+    public string VerticalCtrl = "Vertical_P1";
 
     void Start()
     {
@@ -36,8 +40,8 @@ public class MarbleController : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal") * 1.2f;
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis(horizontalCtrl) * 1.2f;
+        float moveVertical = Input.GetAxis(VerticalCtrl);
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         //seems like it should take accelerometer input too
