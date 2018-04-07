@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d3722830c366497408dfad65776a0172
-timeCreated: 1522963976
+guid: 09d806b9409dd214181398a85859d2f2
+timeCreated: 1522995895
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,9 +8,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Material
+    2100002: Material__redwood_png
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube_001
+    4300000: Post_000
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
