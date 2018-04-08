@@ -19,7 +19,7 @@ public class SoundOnCollide : MonoBehaviour {
     /// </summary>
     /// <param name="other">Other.</param>
     void OnTriggerEnter(Collider other) {
-        if (!other.gameObject.CompareTag("Floor"))
+        if (other.gameObject.CompareTag("Player"))
             audioSource.Play();
     }
 }
