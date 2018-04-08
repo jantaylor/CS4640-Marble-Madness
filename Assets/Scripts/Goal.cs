@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Goal : MonoBehaviour {
+
+    /// <summary>
+    /// The audio source.
+    /// </summary>
+    private AudioSource audioSource;
 	
     public int numPlayersWon = 0;
 	// Use this for initialization
 	void Start () {
 		///know maximum number of players
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,7 +41,7 @@ public class Goal : MonoBehaviour {
             // translate to "1st place" location
             // or 2ndplace
             // or nth place? how may will we have?
-
+            audioSource.Play();
 
         }
         // when maxplayers and numplayers are the same, queue next level
