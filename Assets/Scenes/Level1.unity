@@ -1059,10 +1059,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 631199960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e615a609df5be754dabadc1686771f75, type: 3}
@@ -1696,7 +1696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e615a609df5be754dabadc1686771f75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.9
+      value: -13.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e615a609df5be754dabadc1686771f75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1737,6 +1737,10 @@ Prefab:
     - target: {fileID: 400000, guid: e615a609df5be754dabadc1686771f75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e615a609df5be754dabadc1686771f75, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e615a609df5be754dabadc1686771f75, type: 3}
@@ -3102,7 +3106,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4f01eb81648404f963b395699d8590, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.9
+      value: -12.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4f01eb81648404f963b395699d8590, type: 3}
       propertyPath: m_LocalPosition.z
