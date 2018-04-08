@@ -34,7 +34,8 @@ public class GameState : MonoBehaviour {
     [SerializeField]
     private string[] scenes = new string[] {
         "Menu",
-        "Level1"
+        "Level1",
+        "Level2"
     };
 
     /// <summary>

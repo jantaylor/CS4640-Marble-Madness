@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 67472f226cebb4c46b0712f0dc752d39
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 1fc30aa9bc283f14794c1f04ca082443

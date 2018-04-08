@@ -53,9 +53,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4747106457730754}
-  - component: {fileID: 95898216571142688}
   - component: {fileID: 54687940339850546}
   - component: {fileID: 135152849901917030}
+  - component: {fileID: 114179770359057678}
   m_Layer: 0
   m_Name: Marble2
   m_TagString: Player2
@@ -201,30 +201,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &95898216571142688
-Animator:
-  serializedVersion: 3
+--- !u!114 &114179770359057678
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949608193403472}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 80fdfbce962b1e74f90bd9aa1cb7988f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3d2fc661b7c4940abcc2e14bc989b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 3
+  speed: 6
+  horizontalCtrl: Horizontal_P2
+  VerticalCtrl: Vertical_P2
 --- !u!135 &135152849901917030
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949608193403472}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 044f6354cb4d4c34382a6d246e74f9fe, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
