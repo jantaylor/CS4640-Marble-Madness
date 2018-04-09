@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: 73f931c0235542641b88d6e82e629666
-timeCreated: 1522784088
+guid: 6d88b102b6fe0a949a02e3c2767725ad
+timeCreated: 1523249700
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material_001
-    2100002: Material_001__Goal_png
-    2100004: Material_001__grid_grey_png
+    2100000: Material__grid_grey_png
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Tile_005
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
