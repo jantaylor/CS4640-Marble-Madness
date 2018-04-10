@@ -1,41 +1,19 @@
 fileFormatVersion: 2
-guid: 80fdfbce962b1e74f90bd9aa1cb7988f
-timeCreated: 1522014220
+guid: 741acf0054029e44ea449cc5e0510ed7
+timeCreated: 1523379444
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Empty
-    100002: Empty_001
-    100004: Icosphere
-    100006: //RootNode
-    100008: Sphere
-    400000: Empty
-    400002: Empty_001
-    400004: Icosphere
-    400006: //RootNode
-    400008: Sphere
-    2100000: Material_002
-    2100002: Material_001
-    2300000: Icosphere
-    2300002: Sphere
-    3300000: Icosphere
-    3300002: Sphere
-    4300000: Icosphere
-    4300002: Sphere
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_001
-    second: {fileID: 2100000, guid: 5a43cf173f1255a4e85efcf2cf6f86c1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_002
-    second: {fileID: 2100000, guid: b06bb63a1e0823247b30b12a7d25e2d3, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -90,7 +68,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

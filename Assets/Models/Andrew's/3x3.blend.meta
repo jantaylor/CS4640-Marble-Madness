@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 038d2a15f20f5c245a679dece1da5433
-timeCreated: 1522986350
+guid: a048aeb3b65751146840cff45d70b588
+timeCreated: 1523379445
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material__Seamless_Metal_Plate_Texture_jpg
+    2100000: Material
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
