@@ -25,9 +25,12 @@ public class MarbleController : MonoBehaviour {
 
     public string VerticalCtrl = "Vertical_P1";
 
+    public GameManager gameManager;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -47,5 +50,10 @@ public class MarbleController : MonoBehaviour {
         //seems like it should take accelerometer input too
 
         rb.AddForce(movement * speed);
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Finish"))
+            gameManager.gameOver = true;
     }
 }

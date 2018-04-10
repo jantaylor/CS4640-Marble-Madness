@@ -78,8 +78,8 @@ public class ScoreController : MonoBehaviour {
     }
 
     private void LoadScores() {
-        playerOneScore = GameState.Instance.PlayerOneScore;
-        playerTwoScore = GameState.Instance.PlayerTwoScore;
+        //playerOneScore = GameState.Instance.PlayerOneScore;
+        //playerTwoScore = GameState.Instance.PlayerTwoScore;
     }
 
     private void SaveScores() {
