@@ -19,6 +19,7 @@ public class MarbleController : MonoBehaviour {
     private SphereCollider collide; //the marble controller for movement and physics
 
     private Rigidbody rb;
+
     public float speed;
 
     public string horizontalCtrl = "Horizontal_P1";
@@ -26,6 +27,8 @@ public class MarbleController : MonoBehaviour {
     public string VerticalCtrl = "Vertical_P1";
 
     public GameManager gameManager;
+
+    public bool moveable = true;
 
     void Start()
     {
@@ -43,13 +46,16 @@ public class MarbleController : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis(horizontalCtrl) * 1.2f;
-        float moveVertical = Input.GetAxis(VerticalCtrl);
+        if (moveable) {
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        //seems like it should take accelerometer input too
+            float moveHorizontal = Input.GetAxis(horizontalCtrl) * 1.2f;
+            float moveVertical = Input.GetAxis(VerticalCtrl);
 
-        rb.AddForce(movement * speed);
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+            //seems like it should take accelerometer input too
+
+            rb.AddForce(movement * speed);
+        }
     }
 
     void OnTriggerEnter(Collider other) {

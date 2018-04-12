@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour {
 
+    public AudioClip player1Finished;
+
+    public AudioClip player2Finished;
+
     /// <summary>
     /// The audio source.
     /// </summary>
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
-    public GameManager gameManager;
-
-    public bool playerOneFinished;
-
-    public bool playerTwoFinished;
+    private GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
-		///know maximum number of players
-
+        audioSource = GetComponent<AudioSource>();
+        gameManager = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameState.Instance.TwoPlayers)
-            if (playerOneFinished && playerTwoFinished)
-                Invoke("GameFinished", 3f);
-        else
-            if (playerOneFinished)
-                Invoke("GameFinished", 3f);
-    }
-
-    private void GameFinished() {
-        GameState.Instance.LoadNextScene();
+        if (GameState.Instance.TwoPlayers)
+            if (gameManager.playerOneFinished && gameManager.playerTwoFinished)
+                gameManager.levelComplete = true;
+            else
+            if (gameManager.playerOneFinished)
+                gameManager.levelComplete = true;
     }
 
     /// <summary>
@@ -42,22 +38,13 @@ public class Goal : MonoBehaviour {
     /// their score is updated based on timer remaining
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter(Collider other)
-    {
+    void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            // check timeleft
-            // update score based on their tag
-            // cease other.movement
-            // translate to "1st place" location
-            // or 2ndplace
-            // or nth place? how may will we have?
-            // Play the audiosource attached to whatever player entered
-            // or 0 = player 1
-
-            audioSource.Play();
-
+            audioSource.PlayOneShot(player1Finished);
+            gameManager.playerOneFinished = true;
+        } else if (other.CompareTag("Player 2")) {
+            audioSource.PlayOneShot(player2Finished);
+            gameManager.playerTwoFinished = true;
         }
-        // when maxplayers and numplayers are the same, queue next level
-        // Need to set instance gameManager.levelComplete = true;
     }
 }
