@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class PlayerDeathOnCollision : MonoBehaviour {
 	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void OnTriggerEnter(Collider other) {
+        string sWhoDied = other.GetComponent(name);
+        string sHowTheyDied = gameObject.name;
+
+    }
 }
