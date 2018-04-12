@@ -9,9 +9,14 @@ ModelImporter:
     400000: //RootNode
     2100000: Material_001
     2100002: Material_001__Goal_png
+    2100004: Material_001__grid_grey_png
+    2100006: GoalMat__grid_grey_png_001
+    2100008: GoalMat
+    2100010: GoalMat__Goal_png
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
+    4300002: Goal
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

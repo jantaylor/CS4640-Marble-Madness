@@ -33,7 +33,7 @@ public class TimerController : MonoBehaviour {
 	
 	// Count down timer
 	void Update () {
-        if (timerStopped)
+        if (gameManager.gameOver || gameManager.levelComplete)
             return;
 
         timeLeft -= Time.deltaTime;

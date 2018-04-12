@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public bool gameOver;
 
+    public GameObject player1;
+
     public GameObject player2;
 
     /// <summary>
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour {
     /// <summary>
     /// Boolean to hold if the level is completed
     /// </summary>
-    private bool levelComplete;
+    public bool levelComplete;
 
     /// <summary>
     /// Public Game Over
@@ -49,15 +51,22 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameOver) {
-            // TODO
-            GameState.Instance.LoadMenu();
+            Invoke("GameFinished", 3f);
         } else if (levelComplete) {
-            // TODO
-            GameState.Instance.LoadMenu();
-            return;
+            Invoke("GameFinished", 3f);
+        } else if (playerOneFinished) {
+            player1.GetComponent<MarbleController>().moveable = false;
+            if (!GameState.Instance.TwoPlayers)
+                levelComplete = true;
+        } else if (playerTwoFinished) {
+            player2.GetComponent<MarbleController>().moveable = false;
+                levelComplete = true;
         }
-        return;
 	}
+
+    private void GameFinished() {
+        GameState.Instance.LoadMenu();
+    }
 
     private void LoadGame() {
         twoPlayers = GameState.Instance.TwoPlayers;
