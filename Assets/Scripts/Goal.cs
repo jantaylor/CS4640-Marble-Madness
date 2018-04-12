@@ -7,9 +7,14 @@ public class Goal : MonoBehaviour {
     /// <summary>
     /// The audio source.
     /// </summary>
-    public AudioSource[] audioSources;
-	
-    public int numPlayersWon = 0;
+    public AudioSource audioSource;
+
+    public GameManager gameManager;
+
+    public bool playerOneFinished;
+
+    public bool playerTwoFinished;
+
 	// Use this for initialization
 	void Start () {
 		///know maximum number of players
@@ -18,8 +23,17 @@ public class Goal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if (GameState.Instance.TwoPlayers)
+            if (playerOneFinished && playerTwoFinished)
+                Invoke("GameFinished", 3f);
+        else
+            if (playerOneFinished)
+                Invoke("GameFinished", 3f);
+    }
+
+    private void GameFinished() {
+        GameState.Instance.LoadNextScene();
+    }
 
     /// <summary>
     /// When a player enters the goal,
@@ -30,10 +44,6 @@ public class Goal : MonoBehaviour {
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
-        // do we assume that a player triggered?
-        // sure why not
-        numPlayersWon++;
-
         if (other.CompareTag("Player")) {
             // check timeleft
             // update score based on their tag
@@ -44,7 +54,7 @@ public class Goal : MonoBehaviour {
             // Play the audiosource attached to whatever player entered
             // or 0 = player 1
 
-            audioSources[0].Play();//Which player?
+            audioSource.Play();
 
         }
         // when maxplayers and numplayers are the same, queue next level
