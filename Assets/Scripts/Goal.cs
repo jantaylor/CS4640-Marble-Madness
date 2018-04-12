@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour {
 
+    public AudioClip player1Finished;
+
+    public AudioClip player2Finished;
+
     /// <summary>
     /// The audio source.
     /// </summary>
-    public AudioSource[] audioSources;
-	
-    public int numPlayersWon = 0;
+    private AudioSource audioSource;
+
+    private GameManager gameManager;
+
 	// Use this for initialization
 	void Start () {
-		///know maximum number of players
-
+        audioSource = GetComponent<AudioSource>();
+        gameManager = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (GameState.Instance.TwoPlayers)
+            if (gameManager.playerOneFinished && gameManager.playerTwoFinished)
+                gameManager.levelComplete = true;
+            else
+            if (gameManager.playerOneFinished)
+                gameManager.levelComplete = true;
+    }
 
     /// <summary>
     /// When a player enters the goal,
@@ -28,26 +38,13 @@ public class Goal : MonoBehaviour {
     /// their score is updated based on timer remaining
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter(Collider other)
-    {
-        // do we assume that a player triggered?
-        // sure why not
-        numPlayersWon++;
-
+    void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            // check timeleft
-            // update score based on their tag
-            // cease other.movement
-            // translate to "1st place" location
-            // or 2ndplace
-            // or nth place? how may will we have?
-            // Play the audiosource attached to whatever player entered
-            // or 0 = player 1
-
-            audioSources[0].Play();//Which player?
-
+            audioSource.PlayOneShot(player1Finished);
+            gameManager.playerOneFinished = true;
+        } else if (other.CompareTag("Player 2")) {
+            audioSource.PlayOneShot(player2Finished);
+            gameManager.playerTwoFinished = true;
         }
-        // when maxplayers and numplayers are the same, queue next level
-        // Need to set instance gameManager.levelComplete = true;
     }
 }
