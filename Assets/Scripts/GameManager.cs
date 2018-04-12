@@ -56,8 +56,11 @@ public class GameManager : MonoBehaviour {
             Invoke("GameFinished", 3f);
         } else if (playerOneFinished) {
             player1.GetComponent<MarbleController>().moveable = false;
+            if (!GameState.Instance.TwoPlayers)
+                levelComplete = true;
         } else if (playerTwoFinished) {
             player2.GetComponent<MarbleController>().moveable = false;
+                levelComplete = true;
         }
 	}
 
