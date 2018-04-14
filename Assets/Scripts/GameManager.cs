@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour {
 
     private void LoadGame() {
         twoPlayers = GameState.Instance.TwoPlayers;
+        mainCamera.gameObject.SetActive(true);
+        camera1.gameObject.SetActive(false);
+        camera2.gameObject.SetActive(false);
 
         if (twoPlayers) {
             player2.gameObject.SetActive(true);
