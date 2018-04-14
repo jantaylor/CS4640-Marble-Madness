@@ -42,7 +42,7 @@ public class Goal : MonoBehaviour {
         if (other.CompareTag("Player")) {
             audioSource.PlayOneShot(player1Finished);
             gameManager.playerOneFinished = true;
-        } else if (other.CompareTag("Player 2")) {
+        } else if (other.CompareTag("Player2")) {
             audioSource.PlayOneShot(player2Finished);
             gameManager.playerTwoFinished = true;
         }

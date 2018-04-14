@@ -52,9 +52,6 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LoadGame();
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        camera1 = GameObject.FindGameObjectWithTag("Camera1");
-        camera2 = GameObject.FindGameObjectWithTag("Camera2");
     }
 
     // Update is called once per frame
