@@ -26,7 +26,7 @@ public class HighScoreController : MonoBehaviour {
     // Get the scores from the API to display in a GUIText.
     // remember to use StartCoroutine when calling this function!
     IEnumerator GetScores() {
-        gameObject.GetComponent<GUIText>().text = "Loading Scores";
+        GameObject.FindGameObjectsWithTag("High Score List") = "Loading Scores";
         WWW hs_get = new WWW(highscoreURL);
         yield return hs_get;
 

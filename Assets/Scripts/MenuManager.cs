@@ -28,6 +28,10 @@ public class MenuManager : MonoBehaviour {
         SceneManager.LoadScene("Level2");
     }
 
+    public void MainMenu() {
+        GameState.Instance.LoadMenu();
+    }
+
     /// <summary>
     /// Load the High Scores
     /// </summary>
