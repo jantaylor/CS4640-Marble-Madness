@@ -20,6 +20,12 @@ public class GameManager : MonoBehaviour {
 
     public GameObject player2;
 
+    public GameObject mainCamera;
+
+    public GameObject camera1;
+
+    public GameObject camera2;
+
     /// <summary>
     /// If the player dies by falling we needn't animate
     /// </summary>
@@ -46,10 +52,13 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LoadGame();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        camera1 = GameObject.FindGameObjectWithTag("Camera1");
+        camera2 = GameObject.FindGameObjectWithTag("Camera2");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (gameOver) {
             Invoke("GameFinished", 3f);
         } else if (levelComplete) {
@@ -73,6 +82,9 @@ public class GameManager : MonoBehaviour {
 
         if (twoPlayers) {
             player2.gameObject.SetActive(true);
+            mainCamera.gameObject.SetActive(false);
+            camera1.gameObject.SetActive(true);
+            camera2.gameObject.SetActive(true);
         }
 
         playerOneFinished = false;
