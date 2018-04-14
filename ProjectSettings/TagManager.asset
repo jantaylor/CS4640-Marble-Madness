@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player2
   - Floor
+  - Respawn2
   layers:
   - Default
   - TransparentFX
