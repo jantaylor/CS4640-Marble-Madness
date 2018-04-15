@@ -30,11 +30,22 @@ public class MenuManager : MonoBehaviour {
         SceneManager.LoadScene("Test");
     }
 
+    public void MainMenu() {
+        GameState.Instance.LoadMenu();
+    }
+
     /// <summary>
     /// Load the High Scores
     /// </summary>
     public void HighScores() {
         GameState.Instance.LoadHighScores();
+    }
+
+    /// <summary>
+    /// Load the How to Play scene
+    /// </summary>
+    public void HowToPlay() {
+        GameState.Instance.LoadHowToPlay();
     }
 
     /// <summary>

@@ -126,6 +126,11 @@ public class GameState : MonoBehaviour {
         SceneManager.LoadScene(ActiveScene);
     }
 
+    public void LoadHowToPlay() {
+        ActiveScene = -1;
+        SceneManager.LoadScene("How To Play");
+    }
+
     /// <summary>
     /// Load the HighScores Scene
     /// </summary>
