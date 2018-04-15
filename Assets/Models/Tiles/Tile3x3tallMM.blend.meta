@@ -8,10 +8,12 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Material
+    2100002: Material__bluetexturegrid_png
     2300000: //RootNode
     3300000: //RootNode
     4300000: Tile_004
     4300002: Tile_005
+    4300004: Tile_006
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
