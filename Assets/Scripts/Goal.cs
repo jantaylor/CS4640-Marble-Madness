@@ -39,10 +39,10 @@ public class Goal : MonoBehaviour {
     /// </summary>
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player") && !gameManager.playerOneFinished) {
             audioSource.PlayOneShot(player1Finished);
             gameManager.playerOneFinished = true;
-        } else if (other.CompareTag("Player2")) {
+        } else if (other.CompareTag("Player2") && !gameManager.playerTwoFinished) {
             audioSource.PlayOneShot(player2Finished);
             gameManager.playerTwoFinished = true;
         }

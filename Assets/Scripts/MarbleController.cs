@@ -30,6 +30,8 @@ public class MarbleController : MonoBehaviour {
 
     public bool moveable = true;
 
+    private bool slide = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,9 +43,18 @@ public class MarbleController : MonoBehaviour {
 	
     void Update()
     {
-        
+        if (!moveable && slide) {
+            Invoke("Slide", 1.2f);
+        }
+            
 
     }
+
+    private void Slide() {
+        rb.velocity = Vector3.zero;
+        slide = false;
+    }
+
     void FixedUpdate()
     {
         if (moveable) {

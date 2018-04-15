@@ -56,20 +56,28 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        // check for game over
+        if (playerOneFinished && playerTwoFinished && twoPlayers) {
+            levelComplete = true;
+        } else if (playerOneFinished && !twoPlayers) {
+            player1.moveable = false;
+            levelComplete = true;
+        }
+
+        // game over and level finished scenarios
         if (gameOver) {
             Invoke("GameFinished", 3f);
         } else if (levelComplete) {
             Invoke("GameFinished", 3f);
-        } else if (playerOneFinished && GameState.Instance.TwoPlayers) {
-            player1.moveable = false;
-        } else if (playerTwoFinished && GameState.Instance.TwoPlayers) {
-            player2.moveable = false;
-        } else if (playerOneFinished && !GameState.Instance.TwoPlayers) {
-            player1.GetComponent<MarbleController>().moveable = false;
-            levelComplete = true;
-        } else if (playerOneFinished && playerTwoFinished && GameState.Instance.TwoPlayers) {
-            levelComplete = true;
         }
+
+        // set movement to false upon finishing
+        if (playerOneFinished && twoPlayers) {
+            player1.moveable = false;
+        } else if (playerTwoFinished && twoPlayers) {
+            player2.moveable = false;
+        } 
 	}
 
     private void GameFinished() {
