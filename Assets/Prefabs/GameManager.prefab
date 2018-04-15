@@ -55,9 +55,9 @@ MonoBehaviour:
   playerTwoFinished: 0
   twoPlayers: 0
   gameOver: 0
-  player1: {fileID: 1890916489360994, guid: 6aa4bb06ad8507e41a1a21bb80a3a0c9, type: 2}
-  player2: {fileID: 1949608193403472, guid: 8881c5a463d01bc4582a549547c12ee3, type: 2}
-  mainCamera: {fileID: 1771794643668616, guid: 799d56fddd2c5524cb4f9a7412329591, type: 2}
-  camera1: {fileID: 1759957086153376, guid: b0fe73a17d7798d48b953b7f45c373b9, type: 2}
-  camera2: {fileID: 1704384107905504, guid: 3230e75c250a74a41915eb358ce3afa2, type: 2}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  mainCamera: {fileID: 0}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
   levelComplete: 0

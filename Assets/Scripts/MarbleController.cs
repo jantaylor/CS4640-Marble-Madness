@@ -59,7 +59,6 @@ public class MarbleController : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Finish"))
-            gameManager.gameOver = true;
+
     }
 }

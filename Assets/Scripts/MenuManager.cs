@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour {
     /// </summary>
     public void LocalMultiplayer() {
         GameState.Instance.TwoPlayers = true;
+        GameState.Instance.ActiveScene = 4;
         //SceneManager.LoadScene("Level1");
         SceneManager.LoadScene("Test");
     }

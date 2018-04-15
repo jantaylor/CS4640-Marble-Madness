@@ -35,7 +35,9 @@ public class GameState : MonoBehaviour {
     private string[] scenes = new string[] {
         "Menu",
         "Level1",
-        "Level2"
+        "Level2",
+        "Level3",
+        "Test"
     };
 
     /// <summary>
