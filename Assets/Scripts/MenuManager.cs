@@ -25,7 +25,13 @@ public class MenuManager : MonoBehaviour {
     /// </summary>
     public void LocalMultiplayer() {
         GameState.Instance.TwoPlayers = true;
-        SceneManager.LoadScene("Level2");
+        GameState.Instance.ActiveScene = 4;
+        //SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Test");
+    }
+
+    public void MainMenu() {
+        GameState.Instance.LoadMenu();
     }
 
     /// <summary>
@@ -33,6 +39,13 @@ public class MenuManager : MonoBehaviour {
     /// </summary>
     public void HighScores() {
         GameState.Instance.LoadHighScores();
+    }
+
+    /// <summary>
+    /// Load the How to Play scene
+    /// </summary>
+    public void HowToPlay() {
+        GameState.Instance.LoadHowToPlay();
     }
 
     /// <summary>

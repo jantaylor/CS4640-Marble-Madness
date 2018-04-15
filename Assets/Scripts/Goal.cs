@@ -23,12 +23,12 @@ public class Goal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GameState.Instance.TwoPlayers)
-            if (gameManager.playerOneFinished && gameManager.playerTwoFinished)
-                gameManager.levelComplete = true;
-            else
-            if (gameManager.playerOneFinished)
-                gameManager.levelComplete = true;
+        //if (GameState.Instance.TwoPlayers)
+        //    if (gameManager.playerOneFinished && gameManager.playerTwoFinished)
+        //        gameManager.levelComplete = true;
+        //else
+        //    if (gameManager.playerOneFinished)
+        //        gameManager.levelComplete = true;
     }
 
     /// <summary>
@@ -39,10 +39,10 @@ public class Goal : MonoBehaviour {
     /// </summary>
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player") && !gameManager.playerOneFinished) {
             audioSource.PlayOneShot(player1Finished);
             gameManager.playerOneFinished = true;
-        } else if (other.CompareTag("Player 2")) {
+        } else if (other.CompareTag("Player2") && !gameManager.playerTwoFinished) {
             audioSource.PlayOneShot(player2Finished);
             gameManager.playerTwoFinished = true;
         }

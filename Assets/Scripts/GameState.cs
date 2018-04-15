@@ -35,7 +35,9 @@ public class GameState : MonoBehaviour {
     private string[] scenes = new string[] {
         "Menu",
         "Level1",
-        "Level2"
+        "Level2",
+        "Level3",
+        "Test"
     };
 
     /// <summary>
@@ -122,6 +124,11 @@ public class GameState : MonoBehaviour {
         // Load the menu
         ActiveScene = 0; // menu scene
         SceneManager.LoadScene(ActiveScene);
+    }
+
+    public void LoadHowToPlay() {
+        ActiveScene = -1;
+        SceneManager.LoadScene("How To Play");
     }
 
     /// <summary>

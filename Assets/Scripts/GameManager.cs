@@ -16,9 +16,15 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public bool gameOver;
 
-    public GameObject player1;
+    public MarbleController player1;
 
-    public GameObject player2;
+    public MarbleController player2;
+
+    public GameObject mainCamera;
+
+    public GameObject camera1;
+
+    public GameObject camera2;
 
     /// <summary>
     /// If the player dies by falling we needn't animate
@@ -46,22 +52,32 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LoadGame();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (gameOver) {
+    }
+
+    // Update is called once per frame
+    void Update() {
+
+        // check for game over
+        if (playerOneFinished && playerTwoFinished && twoPlayers) {
+            levelComplete = true;
+        } else if (playerOneFinished && !twoPlayers) {
+            player1.moveable = false;
+            levelComplete = true;
+        }
+
+        // game over and level finished scenarios
+        if (gameOver) {
             Invoke("GameFinished", 3f);
         } else if (levelComplete) {
             Invoke("GameFinished", 3f);
-        } else if (playerOneFinished) {
-            player1.GetComponent<MarbleController>().moveable = false;
-            if (!GameState.Instance.TwoPlayers)
-                levelComplete = true;
-        } else if (playerTwoFinished) {
-            player2.GetComponent<MarbleController>().moveable = false;
-                levelComplete = true;
         }
+
+        // set movement to false upon finishing
+        if (playerOneFinished && twoPlayers) {
+            player1.moveable = false;
+        } else if (playerTwoFinished && twoPlayers) {
+            player2.moveable = false;
+        } 
 	}
 
     private void GameFinished() {
@@ -69,10 +85,18 @@ public class GameManager : MonoBehaviour {
     }
 
     private void LoadGame() {
-        twoPlayers = GameState.Instance.TwoPlayers;
+        if (GameState.Instance.ActiveScene != 0) {
+            twoPlayers = GameState.Instance.TwoPlayers;
+            mainCamera.gameObject.SetActive(true);
+            camera1.gameObject.SetActive(false);
+            camera2.gameObject.SetActive(false);
 
-        if (twoPlayers) {
-            player2.gameObject.SetActive(true);
+            if (twoPlayers) {
+                player2.gameObject.SetActive(true);
+                mainCamera.gameObject.SetActive(false);
+                camera1.gameObject.SetActive(true);
+                camera2.gameObject.SetActive(true);
+            }
         }
 
         playerOneFinished = false;
