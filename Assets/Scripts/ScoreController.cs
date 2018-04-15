@@ -9,7 +9,7 @@ public class ScoreController : MonoBehaviour {
 
     private int playerTwoScore;
 
-    private int tickScore = 70;
+    private int tickScore = 10;
 
     private int finishScore = 1000;
 
@@ -82,15 +82,15 @@ public class ScoreController : MonoBehaviour {
     }
 
     public void AddTickScore() {
-        PlayerOneScore += tickScore;
+        if (!gameManager.playerOneFinished)
+            PlayerOneScore += tickScore;
 
-        if (gameManager.twoPlayers) {
+        if (gameManager.twoPlayers && !gameManager.playerTwoFinished)
             PlayerTwoScore += tickScore;
-        }
     }
 
     public void CalculateBonusScore(string p) {
-        bonusScore = timerController.timeLeftInt * 10;
+        bonusScore = timerController.timeLeftInt * 100;
         bonusScoreText.text = "+ " + bonusScore.ToString();
         if (p == "p1")
             PlayerOneScore += bonusScore;

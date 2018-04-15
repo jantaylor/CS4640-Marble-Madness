@@ -9,62 +9,55 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1901398957607034}
+  m_RootGameObject: {fileID: 1373351148629212}
   m_IsPrefabParent: 1
---- !u!1 &1901398957607034
+--- !u!1 &1373351148629212
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4967446067555074}
-  - component: {fileID: 65652688259883046}
-  - component: {fileID: 114527706956797174}
+  - component: {fileID: 4947295203268850}
+  - component: {fileID: 114884055609603102}
   m_Layer: 0
-  m_Name: EndlessPit
-  m_TagString: Respawn
+  m_Name: GameManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4967446067555074
+--- !u!4 &4947295203268850
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901398957607034}
-  m_LocalRotation: {x: -0, y: -0.38268346, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: -15, z: -34}
+  m_GameObject: {fileID: 1373351148629212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65652688259883046
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901398957607034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 256, y: 1, z: 170}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114527706956797174
+--- !u!114 &114884055609603102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901398957607034}
+  m_GameObject: {fileID: 1373351148629212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724cca8b75b68b54fbaa58d55bc9b335, type: 3}
+  m_Script: {fileID: 11500000, guid: fec4636d0ec827945b6e1fec694659ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
-  player2RespawnPoint: {fileID: 0}
+  playerOneFinished: 0
+  playerTwoFinished: 0
+  twoPlayers: 0
+  gameOver: 0
   player1: {fileID: 0}
   player2: {fileID: 0}
+  mainCamera: {fileID: 0}
+  camera1: {fileID: 0}
+  camera2: {fileID: 0}
+  levelComplete: 0

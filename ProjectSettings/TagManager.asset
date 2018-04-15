@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Player2
   - Floor
+  - Respawn2
+  - Camera2
+  - Camera1
   layers:
   - Default
   - TransparentFX
