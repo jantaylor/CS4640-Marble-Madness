@@ -1,27 +1,51 @@
 fileFormatVersion: 2
-guid: a048aeb3b65751146840cff45d70b588
-timeCreated: 1523379445
+guid: 715c800bbf141ef4382a4aae472fe6d5
+timeCreated: 1523817957
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material
-    2100002: Material__grid_grey_png
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
-    4300002: threeByThree
-    6400000: //RootNode
+    100000: Body
+    100002: Bone
+    100004: Bone_002
+    100006: Bone_003
+    100008: Bone_004
+    100010: Bone_005
+    100012: Bone_006
+    100014: Bone_007
+    100016: Bone_008
+    100018: Head
+    100020: ik
+    100022: //RootNode
+    100024: MrblMchrBns
+    100026: Plane
+    100028: Tail
+    400000: Body
+    400002: Bone
+    400004: Bone_002
+    400006: Bone_003
+    400008: Bone_004
+    400010: Bone_005
+    400012: Bone_006
+    400014: Bone_007
+    400016: Bone_008
+    400018: Head
+    400020: ik
+    400022: //RootNode
+    400024: MrblMchrBns
+    400026: Plane
+    400028: Tail
+    2100000: Green_Slime__Green_Slime_png
+    2100002: unnamed
+    2300000: Plane
+    3300000: Plane
+    4300000: Body
+    4300002: Plane
     7400000: Default Take
+    7400002: MrblMchrBnsAction
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material__grid_grey_png
-    second: {fileID: 2100000, guid: 4222455b875cfa8429f91892b2c92d7c, type: 2}
+    13700000: Body
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -52,14 +76,14 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 2
-    addColliders: 1
+    meshCompression: 0
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -76,7 +100,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

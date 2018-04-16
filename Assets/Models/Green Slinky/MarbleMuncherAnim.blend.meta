@@ -1,27 +1,40 @@
 fileFormatVersion: 2
-guid: a048aeb3b65751146840cff45d70b588
-timeCreated: 1523379445
+guid: 15a81a9c2cc251c41898c80498422df7
+timeCreated: 1523817950
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material
-    2100002: Material__grid_grey_png
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
-    4300002: threeByThree
-    6400000: //RootNode
+    100000: Armature
+    100002: Body
+    100004: Head
+    100006: //RootNode
+    100008: mid
+    100010: mid-to-head
+    100012: Plane
+    100014: SlinkyBones
+    100016: Tail
+    100018: tail-to-mid
+    400000: Armature
+    400002: Body
+    400004: Head
+    400006: //RootNode
+    400008: mid
+    400010: mid-to-head
+    400012: Plane
+    400014: SlinkyBones
+    400016: Tail
+    400018: tail-to-mid
+    2100000: unnamed
+    2100002: Green_Slime__Green_Slime_png
+    2300000: Plane
+    3300000: Plane
+    4300000: Plane
+    4300002: Body
     7400000: Default Take
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material__grid_grey_png
-    second: {fileID: 2100000, guid: 4222455b875cfa8429f91892b2c92d7c, type: 2}
+    13700000: Body
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -52,14 +65,14 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 2
-    addColliders: 1
+    meshCompression: 0
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -76,7 +89,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
