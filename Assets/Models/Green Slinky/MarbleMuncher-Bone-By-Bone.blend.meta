@@ -1,27 +1,39 @@
 fileFormatVersion: 2
-guid: a048aeb3b65751146840cff45d70b588
-timeCreated: 1523379445
+guid: c464ecb62c17ea641a7298eeb1cd128b
+timeCreated: 1523817962
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material
-    2100002: Material__grid_grey_png
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
-    4300002: threeByThree
-    6400000: //RootNode
+    100000: Body
+    100002: Head
+    100004: head-mid
+    100006: IK
+    100008: //RootNode
+    100010: mid
+    100012: Plane
+    100014: Tail
+    100016: Tail-mid
+    400000: Body
+    400002: Head
+    400004: head-mid
+    400006: IK
+    400008: //RootNode
+    400010: mid
+    400012: Plane
+    400014: Tail
+    400016: Tail-mid
+    2100000: Green_Slime__Green_Slime_png
+    2100002: unnamed
+    2300000: Plane
+    3300000: Plane
+    4300000: Body
+    4300002: Plane
     7400000: Default Take
+    7400002: IKAction_001
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material__grid_grey_png
-    second: {fileID: 2100000, guid: 4222455b875cfa8429f91892b2c92d7c, type: 2}
+    13700000: Body
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -52,14 +64,14 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 2
-    addColliders: 1
+    meshCompression: 0
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -76,7 +88,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

@@ -153,7 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: c2491cc31c7bb8249ac9b45524db60fa, type: 3}
+  - {fileID: 2100000, guid: 5a43cf173f1255a4e85efcf2cf6f86c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -297,6 +297,8 @@ MonoBehaviour:
   speed: 6
   horizontalCtrl: Horizontal_P1
   VerticalCtrl: Vertical_P1
+  gameManager: {fileID: 0}
+  moveable: 1
 --- !u!135 &135186742118300232
 SphereCollider:
   m_ObjectHideFlags: 1
