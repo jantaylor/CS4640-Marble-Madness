@@ -128,7 +128,7 @@ public class GameState : MonoBehaviour {
     /// Load the HighScores Scene
     /// </summary>
     public void LoadHighScores() {
-        // TODO
+        SceneManager.LoadScene("HighScores");
     }
     
     public  string Md5Sum(string strToEncrypt) {
