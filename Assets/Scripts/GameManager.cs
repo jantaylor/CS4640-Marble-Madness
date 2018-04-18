@@ -81,7 +81,8 @@ public class GameManager : MonoBehaviour {
 	}
 
     private void GameFinished() {
-        GameState.Instance.LoadMenu();
+        //GameState.Instance.LoadMenu();
+        GameState.Instance.LoadNextScene();
     }
 
     private void LoadGame() {

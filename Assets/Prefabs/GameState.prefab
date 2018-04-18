@@ -52,6 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeScene: 0
+  playerOneScore: 0
+  playerTwoScore: 0
   scenes:
   - Menu
   - Level1
+  - Level2

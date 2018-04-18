@@ -9,6 +9,8 @@ TagManager:
   - Respawn2
   - Camera2
   - Camera1
+  - Chute1
+  - Chute2
   layers:
   - Default
   - TransparentFX

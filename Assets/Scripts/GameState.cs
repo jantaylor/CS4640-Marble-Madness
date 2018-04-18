@@ -35,9 +35,9 @@ public class GameState : MonoBehaviour {
     private string[] scenes = new string[] {
         "Menu",
         "Level1",
-        "Level2",
-        "Level3",
-        "Test"
+        "Level2"
+        //"Level3",
+        //"Test"
     };
 
     /// <summary>
@@ -98,10 +98,11 @@ public class GameState : MonoBehaviour {
     /// </summary>
     public void LoadPreviousScene() {
         // Load the Scene
-        if (ActiveScene != 0) {
-            SceneManager.LoadScene(scenes[ActiveScene -= 1]);
-        } else {
+        if (ActiveScene == 0 || ActiveScene == -1) {
             LoadMenu();
+        } else {
+            ActiveScene = ActiveScene - 1;
+            SceneManager.LoadScene(scenes[ActiveScene]);
         }
     }
 
@@ -110,10 +111,11 @@ public class GameState : MonoBehaviour {
     /// </summary>
     public void LoadNextScene() {
         // Load the Scene based on last scene
-        if (ActiveScene != scenes.Length - 1) {
-            SceneManager.LoadScene(scenes[ActiveScene += 1]);
+        if (ActiveScene == scenes.Length - 1) {
+            LoadMenu(); // High Scores Instead?
         } else {
-            LoadMenu();
+            ActiveScene += 1;
+            SceneManager.LoadScene(scenes[ActiveScene]);
         }
     }
 
@@ -121,13 +123,12 @@ public class GameState : MonoBehaviour {
     /// Load the menu
     /// </summary>
     public void LoadMenu() {
-        // Load the menu
         ActiveScene = 0; // menu scene
-        SceneManager.LoadScene(ActiveScene);
+        SceneManager.LoadScene(scenes[ActiveScene]);
     }
 
     public void LoadHowToPlay() {
-        ActiveScene = -1;
+        ActiveScene = -1; // How to Play Scene
         SceneManager.LoadScene("How To Play");
     }
 
