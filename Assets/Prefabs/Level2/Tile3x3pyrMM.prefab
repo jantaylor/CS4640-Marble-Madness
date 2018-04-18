@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4704013120580768}
   - component: {fileID: 33854132710399364}
   - component: {fileID: 23734996063686336}
+  - component: {fileID: 64990427848941996}
   m_Layer: 0
   m_Name: Tile3x3pyrMM
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1301529081607742}
-  m_Mesh: {fileID: 4300002, guid: 14008bcc98f33794d97b984af310ea38, type: 3}
+  m_Mesh: {fileID: 4300004, guid: 14008bcc98f33794d97b984af310ea38, type: 3}
+--- !u!64 &64990427848941996
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1301529081607742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300004, guid: 14008bcc98f33794d97b984af310ea38, type: 3}
