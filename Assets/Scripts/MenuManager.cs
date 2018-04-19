@@ -34,6 +34,10 @@ public class MenuManager : MonoBehaviour {
         GameState.Instance.LoadMenu();
     }
 
+    public void MainMenu() {
+        GameState.Instance.LoadMenu();
+    }
+
     /// <summary>
     /// Load the High Scores
     /// </summary>
