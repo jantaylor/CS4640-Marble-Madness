@@ -1,4 +1,5 @@
-##Marble Madness CONTROLS
+## Marble Madness CONTROLS
+
 **Player 1 Controls:** Arrow Keys
 
 **Player 2 Controls :** AWSD
