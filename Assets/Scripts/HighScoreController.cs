@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class HighScoreController : MonoBehaviour {
 
     private string secretKey = "mySecretKey"; // Edit this value and make sure it's the same as the one stored on the server
-    private string addScoreURL = "http://scores.virtualrain.com/addscore.php?"; //be sure to add a ? to your url
-    private string highscoreURL = "http://scores.virtualrain.com/display.php";
+    private string addScoreURL = "http://scores.virtualrain.com:8754/addscore.php?"; //be sure to add a ? to your url
+    private string highscoreURL = "http://scores.virtualrain.com:8754/display.php";
 
     public Text scoresList;
 
