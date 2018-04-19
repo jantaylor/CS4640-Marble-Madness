@@ -20,14 +20,11 @@ public class ScoreSubmit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (nameInput.text.Length == 3 && !postedScore) {
-            Debug.Log("Lengh of name: 3");
-            PostScores(nameInput.text.ToUpper(), GameState.Instance.PlayerOneScore);
             postedScore = true;
+            nameInput.readOnly = true;
+            nameInput.customCaretColor = true;
+            nameInput.caretColor = new Color(1f, 1f, 1f, 0f);
+            StartCoroutine(highScoreController.PostScores(nameInput.text.ToUpper(), GameState.Instance.PlayerOneScore));            
         }
-    }
-
-    public void PostScores(string name, int score) {
-        Debug.Log("Posting Score: " + name + " - " + score.ToString());
-        highScoreController.PostScores(name, score);
     }
 }

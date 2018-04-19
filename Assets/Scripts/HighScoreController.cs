@@ -25,17 +25,21 @@ public class HighScoreController : MonoBehaviour {
         //This connects to a server side php script that will add the name and score to a MySQL DB.
         // Supply it with a string representing the players name and the players score.
         string hash = GameState.Instance.Md5Sum(name + score + secretKey);
- 
-        string post_url = addScoreURL + "name=" + WWW.EscapeURL(name) + "&score=" + score + "&hash=" + hash;
+        //Debug.Log(hash);
+        string post_url = addScoreURL + "name=" + WWW.EscapeURL(name) + "&score=" + score.ToString() + "&hash=" + hash;
  
         // Post the URL to the site and create a download object to get the result.
         WWW hs_post = new WWW(post_url);
         yield return hs_post; // Wait until the download is done
- 
+
         if (hs_post.error != null)
         {
             Debug.Log("There was an error posting the high score: " + hs_post.error);
+        } else {
+            Debug.Log("Posted Scores");
         }
+
+        StartCoroutine(GetScores());
     }
  
     // Get the scores from the MySQL DB to display in a GUIText.

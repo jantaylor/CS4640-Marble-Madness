@@ -935,7 +935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 0}
-  highScoreController: {fileID: 0}
+  highScoreController: {fileID: 1128747235}
+  postedScore: 0
 --- !u!1 &1066660669
 GameObject:
   m_ObjectHideFlags: 0
