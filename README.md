@@ -1,22 +1,11 @@
-# CS 4640 - Marble Madness
-A near remake of the classic game
+## Marble Madness CONTROLS
 
-Player 1's controls are up-down-left-right
+**Player 1 Controls:** Arrow Keys
 
+**Player 2 Controls :** AWSD
 
-We had some issues with broken pre-fabs while learning to merge
+## How to Win!
+Maneuver your player around the game board. Avoid enemies and falling off the edges. Get to the goal in time to win the level! 													  
 
-
-had to re-design level 1 twice
-
-
-The bars make a sound when bumped into
-
-
-Goal makes a sound, but you can't hear it because it switches to the menu to quick
-
-
-we'll fix that
-
-
-as well as show you the score and transition you to the next level
+## NOTES
+All levels were designed and created with Blender by group members. Absolutely nothing was acquired from Unity's Asset store or any other place

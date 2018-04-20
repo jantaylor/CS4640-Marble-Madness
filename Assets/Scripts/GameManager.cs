@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour {
         if (gameOver) {
             Invoke("GameFinished", 3f);
         } else if (levelComplete) {
-            Invoke("GameFinished", 3f);
+            Invoke("LevelFinished", 3f);
         }
 
         // set movement to false upon finishing
@@ -80,8 +80,14 @@ public class GameManager : MonoBehaviour {
         } 
 	}
 
+    private void LevelFinished() {
+        //GameState.Instance.LoadMenu();
+        GameState.Instance.LoadNextScene();
+    }
+
     private void GameFinished() {
-        GameState.Instance.LoadMenu();
+        GameState.Instance.CanSubmitHighScore = true;
+        GameState.Instance.LoadHighScores();
     }
 
     private void LoadGame() {
