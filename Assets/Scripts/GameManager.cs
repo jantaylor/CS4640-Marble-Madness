@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour {
 
         // game over and level finished scenarios
         if (gameOver) {
-            Invoke("LevelFinished", 3f);
+            Invoke("GameFinished", 3f);
         } else if (levelComplete) {
             Invoke("LevelFinished", 3f);
         }

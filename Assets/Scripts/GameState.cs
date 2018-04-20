@@ -65,8 +65,8 @@ public class GameState : MonoBehaviour {
     /// Set and get player one's score
     /// </summary>
     public int PlayerTwoScore {
-        get { return playerOneScore; }
-        set { playerOneScore = value; }
+        get { return playerTwoScore; }
+        set { playerTwoScore = value; }
     }
 
     public bool TwoPlayers {
@@ -118,7 +118,9 @@ public class GameState : MonoBehaviour {
     public void LoadNextScene() {
         // Load the Scene based on last scene
         if (ActiveScene == scenes.Length - 1) {
-            LoadMenu(); // High Scores Instead?
+            //LoadMenu(); // High Scores Instead?
+            GameState.Instance.CanSubmitHighScore = true;
+            LoadHighScores();
         } else {
             ActiveScene += 1;
             SceneManager.LoadScene(scenes[ActiveScene]);

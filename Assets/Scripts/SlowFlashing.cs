@@ -7,10 +7,6 @@ public class SlowFlashing : MonoBehaviour {
 
     private Text text;
 
-    private float alphaMax = 1f;
-
-    private float alphaMin = 0f;
-
     private bool hide = true;
 
     private float timeLeft;
