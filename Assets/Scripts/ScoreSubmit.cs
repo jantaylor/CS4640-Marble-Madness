@@ -19,7 +19,7 @@ public class ScoreSubmit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (nameInput.text.Length == 3 && !postedScore) {
+        if (nameInput.text.Length == 3 && !postedScore && GameState.Instance.CanSubmitHighScore) {
             postedScore = true;
             nameInput.readOnly = true;
             nameInput.customCaretColor = true;
