@@ -1575,6 +1575,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   camera1: {fileID: 0}
   camera2: {fileID: 0}
+  scoreController: {fileID: 0}
   levelComplete: 0
 --- !u!4 &1756165315
 Transform:

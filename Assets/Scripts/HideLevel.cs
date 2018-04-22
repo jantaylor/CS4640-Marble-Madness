@@ -9,7 +9,8 @@ public class HideLevel : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         // Hide/disable the parent object when the player hits this.
         // Of course this won't work in 2 player mode due to one player may remain on the platform (screen cheaters)
-        platform.gameObject.SetActive(false);
+        if (!GameState.Instance.TwoPlayers)
+            platform.gameObject.SetActive(false);
     }
 
     // Use this for initialization
@@ -19,7 +20,7 @@ public class HideLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameState.Instance.playerRespawn) {
+		if (GameState.Instance.playerRespawn && !GameState.Instance.TwoPlayers) {
             platform.gameObject.SetActive(true);
             GameState.Instance.playerRespawn = false;
         }

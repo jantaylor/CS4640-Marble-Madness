@@ -94,6 +94,10 @@ public class GameState : MonoBehaviour {
     }
 
     void Start() {
+        Clear();
+    }
+
+    public void Clear() {
         playerOneScore = 0; // Game always starts out at 0
         playerTwoScore = 0;
         twoPlayers = false;
