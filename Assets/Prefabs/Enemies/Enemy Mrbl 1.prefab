@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 54359524949664050}
   - component: {fileID: 135513611322483942}
   - component: {fileID: 114570814852702584}
+  - component: {fileID: 114591640702370808}
   m_Layer: 0
   m_Name: Enemy Mrbl 1
   m_TagString: Player
@@ -244,6 +245,17 @@ MonoBehaviour:
   speed: 75
   force: 100
   rotateAroundObject: {fileID: 1296014821090552}
+--- !u!114 &114591640702370808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1642731959119654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6114520ec6c7cf6488689ce1ee96c308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135513611322483942
 SphereCollider:
   m_ObjectHideFlags: 1
