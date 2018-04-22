@@ -37,7 +37,7 @@ public class GameState : MonoBehaviour {
         "Level1",
         "Level2",
         "Level3",
-        //"Test"
+        "Test"
     };
 
     /// <summary>
