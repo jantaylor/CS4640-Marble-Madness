@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33913461150681336}
   - component: {fileID: 23364578715768306}
   - component: {fileID: 95376318042842204}
+  - component: {fileID: 65826060041899308}
   m_Layer: 0
   m_Name: Tile2x2tallMM
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378778035465932}
   m_Mesh: {fileID: 4300002, guid: edb1189ea66351f41a95679e7135cc82, type: 3}
+--- !u!65 &65826060041899308
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378778035465932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.008779, y: 4.015933, z: 8.670004}
+  m_Center: {x: -0.9956105, y: 0.99203426, z: 3.3350017}
 --- !u!95 &95376318042842204
 Animator:
   serializedVersion: 3

@@ -24,6 +24,7 @@ public class Respawn : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameState.Instance.playerRespawn = true;
             player1.transform.position = respawnPoint.transform.position;
             player1.velocity = Vector3.zero; //stops the force from moving the marble once it lands back on the platform.
             

@@ -37,7 +37,7 @@ public class GameState : MonoBehaviour {
         "Level1",
         "Level2",
         "Level3",
-        "Test"
+        //"Test"
     };
 
     /// <summary>
@@ -65,14 +65,21 @@ public class GameState : MonoBehaviour {
     /// Set and get player one's score
     /// </summary>
     public int PlayerTwoScore {
-        get { return playerOneScore; }
-        set { playerOneScore = value; }
+        get { return playerTwoScore; }
+        set { playerTwoScore = value; }
     }
 
     public bool TwoPlayers {
         get { return twoPlayers; }
         set { twoPlayers = value; }
     }
+
+    /// <summary>
+    /// Easier way
+    /// </summary>
+    public bool CanSubmitHighScore { get; set; }
+
+    public bool playerRespawn { get; set; }
 
     /// <summary>
     /// On starting the game, singleton state created
@@ -90,6 +97,8 @@ public class GameState : MonoBehaviour {
         playerOneScore = 0; // Game always starts out at 0
         playerTwoScore = 0;
         twoPlayers = false;
+        playerRespawn = false;
+        CanSubmitHighScore = false;
         activeScene = 0; // 0 is menu, 1 is level 1
     }
 
@@ -98,10 +107,11 @@ public class GameState : MonoBehaviour {
     /// </summary>
     public void LoadPreviousScene() {
         // Load the Scene
-        if (ActiveScene != 0) {
-            SceneManager.LoadScene(scenes[ActiveScene -= 1]);
-        } else {
+        if (ActiveScene == 0 || ActiveScene == -1) {
             LoadMenu();
+        } else {
+            ActiveScene = ActiveScene - 1;
+            SceneManager.LoadScene(scenes[ActiveScene]);
         }
     }
 
@@ -110,10 +120,13 @@ public class GameState : MonoBehaviour {
     /// </summary>
     public void LoadNextScene() {
         // Load the Scene based on last scene
-        if (ActiveScene != scenes.Length - 1) {
-            SceneManager.LoadScene(scenes[ActiveScene += 1]);
+        if (ActiveScene == scenes.Length - 1) {
+            //LoadMenu(); // High Scores Instead?
+            GameState.Instance.CanSubmitHighScore = true;
+            LoadHighScores();
         } else {
-            LoadMenu();
+            ActiveScene += 1;
+            SceneManager.LoadScene(scenes[ActiveScene]);
         }
     }
 
@@ -121,13 +134,12 @@ public class GameState : MonoBehaviour {
     /// Load the menu
     /// </summary>
     public void LoadMenu() {
-        // Load the menu
         ActiveScene = 0; // menu scene
-        SceneManager.LoadScene(ActiveScene);
+        SceneManager.LoadScene(scenes[ActiveScene]);
     }
 
     public void LoadHowToPlay() {
-        ActiveScene = -1;
+        ActiveScene = -1; // How to Play Scene
         SceneManager.LoadScene("How To Play");
     }
 
@@ -135,6 +147,25 @@ public class GameState : MonoBehaviour {
     /// Load the HighScores Scene
     /// </summary>
     public void LoadHighScores() {
-        // TODO
+        SceneManager.LoadScene("HighScores");
+    }
+    
+    public  string Md5Sum(string strToEncrypt) {
+        System.Text.UTF8Encoding ue = new System.Text.UTF8Encoding();
+        byte[] bytes = ue.GetBytes(strToEncrypt);
+
+        // encrypt bytes
+        System.Security.Cryptography.MD5CryptoServiceProvider md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+        byte[] hashBytes = md5.ComputeHash(bytes);
+
+        // Convert the encrypted bytes back to a string (base 16)
+        string hashString = "";
+
+        for (int i = 0; i < hashBytes.Length; i++)
+        {
+            hashString += System.Convert.ToString(hashBytes[i], 16).PadLeft(2, '0');
+        }
+
+        return hashString.PadLeft(32, '0');
     }
 }
