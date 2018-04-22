@@ -29,9 +29,11 @@ ModelImporter:
     3300000: Plane
     4300000: Body
     4300002: Plane
+    6400000: Plane
     7400000: FlipOnce
     7400002: IKAction_001
     7400004: FlipOnce (1)
+    7400006: Default Take
     9500000: //RootNode
     13700000: Body
   externalObjects: {}
@@ -107,7 +109,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 100
+      additiveReferencePoseFrame: 99
     - serializedVersion: 16
       name: IKAction_001
       takeName: IKAction_001
@@ -136,12 +138,40 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 2
-    meshCompression: 1
-    addColliders: 0
+    meshCompression: 3
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
