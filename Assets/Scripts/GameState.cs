@@ -35,8 +35,8 @@ public class GameState : MonoBehaviour {
     private string[] scenes = new string[] {
         "Menu",
         "Level1",
-        "Level2"
-        //"Level3",
+        "Level2",
+        "Level3",
         //"Test"
     };
 
@@ -79,6 +79,8 @@ public class GameState : MonoBehaviour {
     /// </summary>
     public bool CanSubmitHighScore { get; set; }
 
+    public bool playerRespawn { get; set; }
+
     /// <summary>
     /// On starting the game, singleton state created
     /// </summary>
@@ -95,6 +97,7 @@ public class GameState : MonoBehaviour {
         playerOneScore = 0; // Game always starts out at 0
         playerTwoScore = 0;
         twoPlayers = false;
+        playerRespawn = false;
         CanSubmitHighScore = false;
         activeScene = 0; // 0 is menu, 1 is level 1
     }
