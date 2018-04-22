@@ -11,7 +11,8 @@ public class BlackMarble : MonoBehaviour {
     public GameObject rotateAroundObject;
 
     void Update() {
-        transform.RotateAround(Vector3.zero, Vector3.up, speed * Time.deltaTime);
+        //transform.RotateAround(Vector3.zero, Vector3.up, speed * Time.deltaTime);
+        transform.RotateAround(rotateAroundObject.transform.position, Vector3.up, speed * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision) {
