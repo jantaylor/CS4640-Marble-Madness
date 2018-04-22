@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23062687868418630}
   - component: {fileID: 95647229813541962}
   m_Layer: 0
-  m_Name: Green Muncher
+  m_Name: Green Muncher Jan Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
