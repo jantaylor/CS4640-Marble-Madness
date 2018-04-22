@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject camera2;
 
+    public ScoreController scoreController;
+
     /// <summary>
     /// If the player dies by falling we needn't animate
     /// </summary>
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        scoreController = FindObjectOfType<ScoreController>();
         LoadGame();
     }
 
@@ -67,8 +70,10 @@ public class GameManager : MonoBehaviour {
 
         // game over and level finished scenarios
         if (gameOver) {
+            scoreController.SaveScores();
             Invoke("GameFinished", 3f);
         } else if (levelComplete) {
+            scoreController.SaveScores();
             Invoke("LevelFinished", 3f);
         }
 

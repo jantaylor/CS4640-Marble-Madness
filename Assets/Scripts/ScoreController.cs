@@ -110,7 +110,7 @@ public class ScoreController : MonoBehaviour {
             playerTwoScore = GameState.Instance.PlayerTwoScore;
     }
 
-    private void SaveScores() {
+    public void SaveScores() {
         GameState.Instance.PlayerOneScore = playerOneScore;
         if (GameState.Instance.TwoPlayers)
             GameState.Instance.PlayerTwoScore = playerTwoScore;
