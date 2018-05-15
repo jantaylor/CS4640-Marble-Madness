@@ -29,7 +29,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4375906364159688
 Transform:
   m_ObjectHideFlags: 1
@@ -59,8 +59,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 7.8
+  far clip plane: 58.3
   field of view: 45
   orthographic: 0
   orthographic size: 5
@@ -72,8 +72,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3d9b29aef7bb349ae2edf47236cf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1890916489360994, guid: 6aa4bb06ad8507e41a1a21bb80a3a0c9, type: 2}
+  player: {fileID: 0}
 --- !u!124 &124444606505135978
 Behaviour:
   m_ObjectHideFlags: 1
